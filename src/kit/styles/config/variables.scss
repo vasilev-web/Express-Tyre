@@ -1,0 +1,52 @@
+$white:    #fff;
+$gray-100: #404749;
+$gray-200: #969c9f;
+$gray-400: #3a3d3e;
+$gray-600: #282c2d;
+$black:    #2a2c2d;
+
+$primary: $black;
+$secondary: $gray-400;
+
+$font-size-base:              1rem;
+$font-size-sm:                $font-size-base * .75;
+$font-size-lg:                $font-size-base * 1.125;
+
+$font-family-base:            'Arial MT', sans-serif;
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1254px, xxl: 1300px );
+
+@mixin scrollbar() {
+    &::-webkit-scrollbar {
+        width: .25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #ccc;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $secondary;
+        border-radius: 10px;
+        width: .25rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $gray-200;
+    }
+
+    scrollbar-color: $gray-600 $white;
+    scrollbar-width: thin;
+}
